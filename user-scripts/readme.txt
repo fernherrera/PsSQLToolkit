@@ -1,0 +1,1 @@
+This file is here to make sure this folder is created in git.
