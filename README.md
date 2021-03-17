@@ -18,7 +18,7 @@ PowerShell scripts for working with SQL Server databases.
 | sql-operations.ps1 | Main executable, orchestrates all operations.|
 
 ## Syntax
-`.\sql-operations.ps1 -Server [value] -Database [value]...`
+```.\sql-operations.ps1 -Server [value] -Database [value]...```
 
 ## Parameters
 | Option | Description |
@@ -59,25 +59,25 @@ The following examples detail typical command line usage scenarios.
 ### Backup Examples
 To backup a database before a migration use the following:
 
-`sql-operations.bat -Server localhost -Database MyDB -BackupDB -backupFilename MyDB-preMigration.bak`
+```sql-operations.bat -Server localhost -Database MyDB -BackupDB -backupFilename MyDB-preMigration.bak```
 
 ### Copy Database Examples
 To copy a database to a different server with the same name use the following:
 Copy *MyDB* database from *ServerA* to *ServerB*
 
-`sql-operations.bat -CopyDB -Server ServerB -Database MyDB -SourceServer ServerA -SourceDatabase MyDB`
+```sql-operations.bat -CopyDB -Server ServerB -Database MyDB -SourceServer ServerA -SourceDatabase MyDB```
 
 To copy a database on the same server with a different name use the following:
 Copy *MyDB* database to new database called *MyNewDB* on *ServerA*
 
-`sql-operations.bat -CopyDB -Server ServerA -Database MyNewDB -SourceServer ServerA -SourceDatabase MyDB`
+```sql-operations.bat -CopyDB -Server ServerA -Database MyNewDB -SourceServer ServerA -SourceDatabase MyDB```
 
 To copy a database from it's last full backup use the following:
 
-`sql-operations.bat -CopyDB -Server ServerA -Database MyDB -SourceServer ServerB -SourceDatabase MyDB -UseLastBackup`
+```sql-operations.bat -CopyDB -Server ServerA -Database MyDB -SourceServer ServerB -SourceDatabase MyDB -UseLastBackup```
 
 ### Ad-Hoc Script Example
 To run an ad-hoc SQL script file on a database use the following:
 
-`sql-operations.bat -Server ServerA -Database MyDB -Exec -ScriptFile MyCustomScript.sql`
+```sql-operations.bat -Server ServerA -Database MyDB -Exec -ScriptFile MyCustomScript.sql```
 
